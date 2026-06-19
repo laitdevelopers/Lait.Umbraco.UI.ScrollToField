@@ -14,7 +14,7 @@
     <!-- NuGet / Marketplace metadata (used by `dotnet pack`) -->
     <PackageId>Lait.Umbraco.UI.ScrollToField</PackageId>
     <Title>Lait Scroll To Field — table of contents for the Umbraco editor</Title>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <Authors>Anders Bootsmann</Authors>
     <Description>A table of contents navigation helper for the Umbraco backoffice. Adds a dockable outline panel to the document editor that lists the page's tabs, property groups and Block List / Block Grid items — so editors keep their overview and can jump straight to any section on long content pages. Click an entry to scroll it into view and highlight it.</Description>
     <PackageTags>umbraco umbraco-marketplace editor-tools outline table-of-contents navigation blocks scroll productivity</PackageTags>

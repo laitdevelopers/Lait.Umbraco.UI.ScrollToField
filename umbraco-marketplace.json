@@ -5,7 +5,7 @@
   "Title": "Lait Scroll To Field",
   "Description": "A table of contents navigation helper for the Umbraco backoffice. Adds a dockable outline panel to the document editor listing the page's tabs, property groups and Block List / Block Grid items, so editors keep their overview on long, block-heavy pages. Click an entry to scroll it into view and highlight it.",
   "LicenseTypes": [ "Free" ],
-  "Tags": [ "editor-tools", "outline", "table-of-contents", "navigation", "blocks", "productivity" ],
+  "Tags": [ "table of contents", "outline", "navigation", "block editor", "editor tools", "productivity" ],
   "DocumentationUrl": "https://github.com/bootsmann1995/Lait.Umbraco.UI.ScrollToField#readme",
   "IssueTrackerUrl": "https://github.com/bootsmann1995/Lait.Umbraco.UI.ScrollToField/issues",
   "AuthorDetails": {
