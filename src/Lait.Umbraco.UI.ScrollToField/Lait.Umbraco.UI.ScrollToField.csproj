@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+
+    <!-- Serve everything under wwwroot at /App_Plugins/LaitScrollToField.
+         This is how Umbraco 17 discovers the umbraco-package.json from a referenced
+         Razor Class Library (works for project references AND NuGet, no manual copy). -->
+    <StaticWebAssetBasePath>App_Plugins/LaitScrollToField</StaticWebAssetBasePath>
+
+    <!-- NuGet / Marketplace metadata (used by `dotnet pack`) -->
+    <PackageId>Lait.Umbraco.UI.ScrollToField</PackageId>
+    <Title>Lait Scroll To Field — table of contents for the Umbraco editor</Title>
+    <Version>0.1.0</Version>
+    <Authors>Anders Bootsmann</Authors>
+    <Description>A table of contents navigation helper for the Umbraco backoffice. Adds a dockable outline panel to the document editor that lists the page's tabs, property groups and Block List / Block Grid items — so editors keep their overview and can jump straight to any section on long content pages. Click an entry to scroll it into view and highlight it.</Description>
+    <PackageTags>umbraco umbraco-marketplace editor-tools outline table-of-contents navigation blocks scroll productivity</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!-- The Marketplace fetches umbraco-marketplace.json from the repo root of this URL. -->
+    <PackageProjectUrl>https://github.com/bootsmann1995/Lait.Umbraco.UI.ScrollToField</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bootsmann1995/Lait.Umbraco.UI.ScrollToField</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- A direct Umbraco.Cms.* dependency is required for the Marketplace to detect the supported
+         version range. This package is client-only (no server code), so Web.Common is enough.
+         Versions target Umbraco 17 (.NET 10 LTS). Adjust to match your installed Umbraco. -->
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="17.0.0" />
+  </ItemGroup>
+
+  <!-- Include README + icon in the NuGet package. Static web assets under wwwroot are packed automatically. -->
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+    <Content Include="icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

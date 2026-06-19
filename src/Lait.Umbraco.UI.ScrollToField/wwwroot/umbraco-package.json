@@ -1,0 +1,19 @@
+{
+  "name": "Lait Scroll To Field",
+  "version": "0.1.0",
+  "allowPackageTelemetry": false,
+  "extensions": [
+    {
+      "type": "workspaceFooterApp",
+      "alias": "lait.workspaceFooterApp.outline",
+      "name": "Lait Scroll To Field Outline",
+      "author": "Anders Bootsmann",
+      "js": "/App_Plugins/LaitScrollToField/outline-panel.js",
+      "elementName": "lait-scroll-to-field-outline",
+      "weight": 800,
+      "conditions": [
+        { "alias": "Umb.Condition.WorkspaceAlias", "match": "Umb.Workspace.Document" }
+      ]
+    }
+  ]
+}
